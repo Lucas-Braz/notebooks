@@ -1,5 +1,3 @@
-$("#enviar").click(enviarCadastroSoftware);
-
 function enviarCadastroSoftware(){
     let nome = $("#nome").val();
     let exigeLicenca = $("#pago")[0].checked;

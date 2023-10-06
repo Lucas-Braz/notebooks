@@ -44,11 +44,11 @@ public class C_Usuario {
     }
 
     @PostMapping("/cadastro")
+    @ResponseBody
     public String cadastrarUsuario(@RequestParam("nome") String nome,
                                    @RequestParam("email") String email,
                                    @RequestParam("matricula") String matricula,
                                    @RequestParam("cargo") String cargo){
-        S_Usuario.cadastrarUsuario(nome,  cargo, matricula, email);
-        return "usuario/cadastro";
+        return S_Usuario.cadastrarUsuario(nome,  cargo, matricula, email);
     }
 }

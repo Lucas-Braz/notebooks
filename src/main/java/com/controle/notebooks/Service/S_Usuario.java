@@ -56,9 +56,9 @@ public class S_Usuario {
 
             try{
                 r_usuario.save(m_usuario);
-                mensagem += "Deu Bom";
+                mensagem += "Usuário cadastrado com sucesso!";
             }catch (DataIntegrityViolationException e){
-                mensagem += "Deu Ruim";
+                mensagem += "Falha ao cadastrar usuário";
             }
         }
         return mensagem;

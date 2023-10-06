@@ -1,72 +1,53 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Reserva Notebooks</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="cadastroUsuario.js" defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-<body>
-<div class="container">
-    <h1 class="mt-5 mb-3">Cadastro de usuário</h1>
-    <div class="row">
-        <div class="col-8 mb-3">
-            <div class="input-group has-validation">
-                <span class="input-group-text">@</span>
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="nome" placeholder="Nome" required>
-                    <label for="nome">Nome</label>
-                </div>
-                <div class="invalid-feedback">
-                    Por favor informe o nome.
-                </div>
-            </div>
-        </div>
-        <div class="col-4 mb-3">
+<h1 class="mt-5 mb-3">Cadastro de usuário</h1>
+<div class="row">
+    <div class="col-8 mb-3">
+        <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
             <div class="form-floating">
-                <select class="form-select" id="cargo" aria-label="Floating label select example">
-                    <option value="" selected disabled>Selecione...</option>
-                    <option value="1">Coordenador(a)</option>
-                    <option value="2">Pedagogo(a)</option>
-                    <option value="3">Professor(a)</option>
-                </select>
-                <label for="cargo">Cargo</label>
+                <input type="text" class="form-control" id="nome" placeholder="Nome" required>
+                <label for="nome">Nome</label>
             </div>
-        </div>
-        <div class="col-4 mb-3">
-            <div class="input-group has-validation">
-                <span class="input-group-text">@</span>
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="matricula" placeholder="Matricula" required>
-                    <label for="matricula">Matricula</label>
-                </div>
-                <div class="invalid-feedback">
-                    Por favor informe a matricula.
-                </div>
+            <div class="invalid-feedback">
+                Por favor informe o nome.
             </div>
-        </div>
-        <div class="col-8 mb-3">
-            <div class="input-group has-validation">
-                <span class="input-group-text">@</span>
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="email" placeholder="e-Mail" required>
-                    <label for="email">e-Mail</label>
-                </div>
-                <div class="invalid-feedback">
-                    Por favor informe o e-mail.
-                </div>
-            </div>
-        </div>
-        <div class="col-12 text-end">
-            <button id="enviar" class="btn btn-lg btn-primary mt-3">Cadastrar</button>
         </div>
     </div>
+    <div class="col-4 mb-3">
+        <div class="form-floating">
+            <select class="form-select" id="cargo" aria-label="Floating label select example">
+                <option value="" selected disabled>Selecione...</option>
+                <option value="1">Coordenador(a)</option>
+                <option value="2">Pedagogo(a)</option>
+                <option value="3">Professor(a)</option>
+            </select>
+            <label for="cargo">Cargo</label>
+        </div>
+    </div>
+    <div class="col-4 mb-3">
+        <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="matricula" placeholder="Matricula" required>
+                <label for="matricula">Matricula</label>
+            </div>
+            <div class="invalid-feedback">
+                Por favor informe a matricula.
+            </div>
+        </div>
+    </div>
+    <div class="col-8 mb-3">
+        <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="email" placeholder="e-Mail" required>
+                <label for="email">e-Mail</label>
+            </div>
+            <div class="invalid-feedback">
+                Por favor informe o e-mail.
+            </div>
+        </div>
+    </div>
+    <div class="col-12 text-end">
+        <button id="enviar" class="btn btn-lg btn-primary mt-3">Cadastrar</button>
+    </div>
 </div>
-</body>
-</html>

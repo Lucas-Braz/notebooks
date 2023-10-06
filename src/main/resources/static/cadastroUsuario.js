@@ -1,5 +1,3 @@
-$("#enviar").click(cadastrarUsuario);
-
 function cadastrarUsuario(){
 	let nome = $("#nome").val();
 	let matricula = $("#matricula").val();
@@ -16,7 +14,7 @@ function cadastrarUsuario(){
 			cargo:cargo,
 		},
 		success:function(data){
-			alert("ok");
+			alertaSucesso(data);
 		},
 		error: function(){
 			alert("Não ok");

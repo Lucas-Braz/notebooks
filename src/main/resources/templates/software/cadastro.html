@@ -1,43 +1,24 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Reserva Notebooks</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="../../cadastroSoftware.js" defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-<body>
-<div class="container">
-    <h1 class="mt-5 mb-3">Cadastro de software</h1>
-    <div class="row">
-        <div class="col-12 mb-3">
-            <div class="input-group has-validation">
-                <span class="input-group-text">@</span>
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="nome" placeholder="Nome do software" required>
-                    <label for="nome">Nome do software</label>
-                </div>
-                <div class="invalid-feedback">
-                    Por favor informe o nome do software.
-                </div>
+<h1 class="mt-5 mb-3">Cadastro de software</h1>
+<div class="row">
+    <div class="col-12 mb-3">
+        <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="nome" placeholder="Nome do software" required>
+                <label for="nome">Nome do software</label>
+            </div>
+            <div class="invalid-feedback">
+                Por favor informe o nome do software.
             </div>
         </div>
-        <div class="col-6">
-            <input type="radio" class="btn-check" name="options-outlined" id="free" autocomplete="off" checked>
-            <label class="btn btn-outline-success" for="free">Sem Licença</label>
-            <input type="radio" class="btn-check" name="options-outlined" id="pago" autocomplete="off">
-            <label class="btn btn-outline-danger" for="pago">Exige Licença</label>
-        </div>
-        <div class="col-6 mb-3 text-end">
-            <button id="enviar" class="btn btn-lg btn-primary">Cadastrar</button>
-        </div>
+    </div>
+    <div class="col-6">
+        <input type="radio" class="btn-check" name="options-outlined" id="free" autocomplete="off" checked>
+        <label class="btn btn-outline-success" for="free">Sem Licença</label>
+        <input type="radio" class="btn-check" name="options-outlined" id="pago" autocomplete="off">
+        <label class="btn btn-outline-danger" for="pago">Exige Licença</label>
+    </div>
+    <div class="col-6 mb-3 text-end">
+        <button id="enviar" class="btn btn-lg btn-primary">Cadastrar</button>
     </div>
 </div>
-</body>
-</html>

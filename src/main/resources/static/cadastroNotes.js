@@ -12,7 +12,7 @@ function cadastrarNotebooks(){
             patrimonio: patrimonio
         },
         success: function(data){
-            alert(data);
+            alertaSucesso(data);
         },
         error: function(){
             alert("deu ruim");

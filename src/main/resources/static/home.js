@@ -1,18 +1,41 @@
 $('a').click(function(event){
     event.preventDefault();
+    if(!$(this).hasClass('btn')){
+        $('a').removeClass('active disabled');
+        $(this).addClass('active disabled');
+    }
     controleRotasGet($(this).attr("href"));
 });
+
+$('.navbar-brand').off('click');
 
 function controleRotasGet(url){
     switch(url){
         case "/logout":
             gerarSwal(url);
             break;
-        case "/cadastro/notebook":
-            //ações para apresentar a página
-            $("#enviar").click(enviaCadastroNotebook);
+        case "/cadastro/notebooks":
+            $.get(url,function(data){
+                $(".container").html(data);
+                $("#enviar").click(cadastrarNotebooks);
+            });
+            break;
+        case "/cadastro":
+            $.get(url,function(data){
+                $(".container").html(data);
+                $("#enviar").click(cadastrarUsuario);
+            });
+            break;
+        case "/cadastro/software":
+                    $.get(url,function(data){
+                        $(".container").html(data);
+                        $("#enviar").click(enviarCadastroSoftware);
+                    });
+                    break;
         default:
-            alert('cancelei o get e fiz nada mb');
+            $.get(url,function(data){
+                $(".container").html(data);
+            });
     }
 }
 
@@ -37,5 +60,16 @@ function gerarSwal(urlSucesso){
         if (result.isConfirmed) {
             window.location.href=urlSucesso;
         }
+    });
+}
+
+function alertaSucesso(mensagem){
+    Swal.fire({
+        position: 'top-end',
+        toast: true,
+        icon: 'success',
+        title: mensagem,
+        showConfirmButton: false,
+        timer: 2000
     });
 }
