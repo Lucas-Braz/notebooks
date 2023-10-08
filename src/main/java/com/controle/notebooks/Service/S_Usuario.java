@@ -65,7 +65,12 @@ public class S_Usuario {
     }
 
     public static void updateTeste(M_Usuario usuario){
-        usuario.setSenha("666");
+        usuario.setSenha("1234");
         r_usuario.save(usuario);
+    }
+
+    public static void updateByid(M_Usuario usuario){
+        usuario.setSenha("4321");
+        r_usuario.atualizaSenhaUsuarioPorId(usuario.getSenha(), usuario.getId());
     }
 }
