@@ -58,6 +58,6 @@ public class C_Usuario {
     public void testeUpdate(HttpSession session){
         Object usuario = session.getAttribute("usuario");
 //        S_Usuario.updateTeste((M_Usuario) usuario);
-        S_Usuario.updateByid((M_Usuario) usuario);
+        S_Usuario.updateSenhaById((M_Usuario) usuario);
     }
 }

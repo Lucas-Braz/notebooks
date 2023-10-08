@@ -69,7 +69,7 @@ public class S_Usuario {
         r_usuario.save(usuario);
     }
 
-    public static void updateByid(M_Usuario usuario){
+    public static void updateSenhaById(M_Usuario usuario){
         usuario.setSenha("4321");
         r_usuario.atualizaSenhaUsuarioPorId(usuario.getSenha(), usuario.getId());
     }
