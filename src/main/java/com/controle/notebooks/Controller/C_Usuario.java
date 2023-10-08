@@ -1,5 +1,6 @@
 package com.controle.notebooks.Controller;
 
+import com.controle.notebooks.Model.M_Usuario;
 import com.controle.notebooks.Service.S_Usuario;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
@@ -50,5 +51,12 @@ public class C_Usuario {
                                    @RequestParam("matricula") String matricula,
                                    @RequestParam("cargo") String cargo){
         return S_Usuario.cadastrarUsuario(nome,  cargo, matricula, email);
+    }
+
+    @GetMapping("/testeUpdate")
+    @ResponseBody
+    public void testeUpdate(HttpSession session){
+        Object usuario = session.getAttribute("usuario");
+        S_Usuario.updateTeste((M_Usuario) usuario);
     }
 }

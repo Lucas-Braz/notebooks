@@ -32,6 +32,12 @@ function controleRotasGet(url){
                         $("#enviar").click(enviarCadastroSoftware);
                     });
                     break;
+        case "/testeUpdate":
+                            $.get(url,function(data){
+                                $(".container").html(data);
+                                $("#enviar").click(enviarCadastroSoftware);
+                            });
+                            break;
         default:
             $.get(url,function(data){
                 $(".container").html(data);

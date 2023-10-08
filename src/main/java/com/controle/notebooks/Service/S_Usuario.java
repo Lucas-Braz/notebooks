@@ -63,4 +63,9 @@ public class S_Usuario {
         }
         return mensagem;
     }
+
+    public static void updateTeste(M_Usuario usuario){
+        usuario.setSenha("666");
+        r_usuario.save(usuario);
+    }
 }
