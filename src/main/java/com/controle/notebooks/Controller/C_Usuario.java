@@ -2,6 +2,7 @@ package com.controle.notebooks.Controller;
 
 import com.controle.notebooks.Model.M_Usuario;
 import com.controle.notebooks.Service.S_Usuario;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,8 +41,12 @@ public class C_Usuario {
     }
 
     @GetMapping("/cadastro")
-    public String getCadastro(){
-        return "usuario/cadastro";
+    public String getCadastro(HttpServletRequest request){
+        if(request.getHeader("Referer") != null){
+            return "usuario/cadastro";
+        }else{
+            return "redirect:/";
+        }
     }
 
     @PostMapping("/cadastro")

@@ -46,15 +46,25 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/home">Home</a>
                 </li>
-                <li class="nav-item" th:if="${usuario.id_cargo == 1}">
-                    <a class="nav-link" href="/cadastro/notebooks">Cadastrar Notebooks</a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cadastro
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li th:if="${usuario.id_cargo == 1}">
+                            <a class="dropdown-item" href="/cadastro/notebooks">Notebooks</a>
+                        </li>
+                        <li th:if="${usuario.id_cargo == 1}">
+                            <a class="dropdown-item" href="/cadastro">Usuário</a>
+                        </li>
+                        <li th:if="${usuario.id_cargo == 1}">
+                            <a class="dropdown-item" href="/cadastro/software">Software</a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="nav-item" th:if="${usuario.id_cargo == 1}">
-                    <a class="nav-link" href="/cadastro">Cadastrar Usuário</a>
-                </li>
-                <li class="nav-item" th:if="${usuario.id_cargo == 1}">
-                    <a class="nav-link" href="/cadastro/software">Cadastrar software</a>
-                </li>
+
+
             </ul>
             <div class="d-flex">
                 <div style="width: 100%;">
@@ -62,9 +72,6 @@
                 </div>
                 <div class="text-end">
                     <a href="/logout" class="btn btn-sm btn-danger">Sair</a>
-                </div>
-                <div class="text-end">
-                    <a href="/testeUpdate" class="btn btn-sm btn-danger">Reset Senha</a>
                 </div>
             </div>
         </div>

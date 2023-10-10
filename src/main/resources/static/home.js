@@ -1,10 +1,12 @@
 $('a').click(function(event){
-    event.preventDefault();
-    if(!$(this).hasClass('btn')){
-        $('a').removeClass('active disabled');
-        $(this).addClass('active disabled');
+    if(!$(this).hasClass('dropdown-toggle')){
+        event.preventDefault();
+        if(!$(this).hasClass('btn')){
+            $('a').removeClass('active disabled');
+            $(this).addClass('active disabled');
+        }
+        controleRotasGet($(this).attr("href"));
     }
-    controleRotasGet($(this).attr("href"));
 });
 
 $('.navbar-brand').off('click');
