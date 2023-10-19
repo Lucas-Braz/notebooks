@@ -1,0 +1,94 @@
+<h1 class="mt-5 mb-3">Perfil</h1>
+<div class="row">
+    <div class="col-8 mb-3">
+        <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="nome" placeholder="Nome" required th:value="${usuario.nome}">
+                <label for="nome">Nome</label>
+            </div>
+            <div class="invalid-feedback">
+                Por favor informe o nome.
+            </div>
+        </div>
+    </div>
+    <div class="col-4 mb-3">
+        <div class="form-floating">
+            <select class="form-select" id="cargo" aria-label="Floating label select example">
+                <option selected value="1">Coordenador(a)</option>
+                <option value="2">Pedagogo(a)</option>
+                <option value="3">Professor(a)</option>
+            </select>
+            <label for="cargo">Cargo</label>
+        </div>
+    </div>
+    <div class="col-4 mb-3">
+        <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="matricula" placeholder="Matricula" required th:value="${usuario.matricula}">
+                <label for="matricula">Matricula</label>
+            </div>
+            <div class="invalid-feedback">
+                Por favor informe a matricula.
+            </div>
+        </div>
+    </div>
+    <div class="col-8 mb-3">
+        <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="email" placeholder="e-Mail" required th:value="${usuario.email}">
+                <label for="email">e-Mail</label>
+            </div>
+            <div class="invalid-feedback">
+                Por favor informe o e-mail.
+            </div>
+        </div>
+    </div>
+    <div class="col-4 mb-3">
+        <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="senhaAtual" placeholder="Senha Atual" required>
+                <label for="senhaAtual">Senha Atual</label>
+            </div>
+            <div class="invalid-feedback">
+                Por favor informe a Senha Atual.
+            </div>
+        </div>
+    </div>
+    <div class="col-4 mb-3">
+        <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="novaSenha" placeholder="Nova Senha" required>
+                <label for="novaSenha">Nova Senha</label>
+            </div>
+            <div class="invalid-feedback">
+                A Nova senha deve ser igual a confirmação de senha!
+            </div>
+        </div>
+    </div>
+    <div class="col-4 mb-3">
+        <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="confSenha" placeholder="Confirmação de Senha" required>
+                <label for="confSenha">Confirmação de Senha</label>
+            </div>
+            <div class="invalid-feedback">
+                A Nova senha deve ser igual a confirmação de senha!
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <button id="salvar" class="btn btn-lg btn-primary mt-3">Salvar</button>
+    </div>
+    <div class="col-6">
+        <div class="form-check form-switch form-check-reverse">
+            <input class="form-check-input" type="checkbox" id="ativo" checked>
+            <label class="form-check-label" for="ativo">Ativo</label>
+        </div>
+    </div>
+</div>

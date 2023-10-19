@@ -21,6 +21,8 @@
     <script th:if="${usuario.id_cargo == 1}" src="cadastroNotes.js"></script>
     <script th:if="${usuario.id_cargo == 1}" src="cadastroUsuario.js"></script>
     <script th:if="${usuario.id_cargo == 1}" src="cadastroSoftware.js"></script>
+    <script src="routes.js"></script>
+    <script src="perfil.js"></script>
     <script src="home.js" defer></script>
     <!--Custom Styles-->
     <style type="text/css">
@@ -63,8 +65,9 @@
                         </li>
                     </ul>
                 </li>
-
-
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/edit/usuario">Perfil</a>
+                </li>
             </ul>
             <div class="d-flex">
                 <div style="width: 100%;">

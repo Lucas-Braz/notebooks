@@ -11,42 +11,6 @@ $('a').click(function(event){
 
 $('.navbar-brand').off('click');
 
-function controleRotasGet(url){
-    switch(url){
-        case "/logout":
-            gerarSwal(url);
-            break;
-        case "/cadastro/notebooks":
-            $.get(url,function(data){
-                $(".container").html(data);
-                $("#enviar").click(cadastrarNotebooks);
-            });
-            break;
-        case "/cadastro":
-            $.get(url,function(data){
-                $(".container").html(data);
-                $("#enviar").click(cadastrarUsuario);
-            });
-            break;
-        case "/cadastro/software":
-                    $.get(url,function(data){
-                        $(".container").html(data);
-                        $("#enviar").click(enviarCadastroSoftware);
-                    });
-                    break;
-        case "/testeUpdate":
-                            $.get(url,function(data){
-                                $(".container").html(data);
-                                $("#enviar").click(enviarCadastroSoftware);
-                            });
-                            break;
-        default:
-            $.get(url,function(data){
-                $(".container").html(data);
-            });
-    }
-}
-
 function gerarSwal(urlSucesso){
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {

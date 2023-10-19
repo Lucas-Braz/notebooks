@@ -24,7 +24,6 @@ public class C_Notebooks {
     @ResponseBody
     public String postCadNotes(@RequestParam("numero") String numero,
                                @RequestParam("patrimonio") String patrimonio){
-
         return S_Notebooks.cadastrarNotebook(numero,patrimonio);
     }
 
