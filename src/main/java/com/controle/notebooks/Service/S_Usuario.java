@@ -72,14 +72,13 @@ public class S_Usuario {
         String mensagem = "";
 
         M_Usuario m_usuario = (M_Usuario) usuario;
-        matricula = S_Generico.limparNumero(matricula);
 
         if(m_usuario.getId_cargo() != 1){
             matricula = m_usuario.getMatricula().toString();
             cargo = m_usuario.getId_cargo().toString();
             ativo = m_usuario.isAtivo();
         }
-
+        matricula = S_Generico.limparNumero(matricula);
 
         if(senhaAtual.equals(m_usuario.getSenha())){
             podeEditar = true;

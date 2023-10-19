@@ -45,3 +45,14 @@ function alertaSucesso(mensagem){
         timer: 2000
     });
 }
+
+function addReserva(){
+    let dataReserva = $("#data").val()+' 00:00:00 -0300';
+    let quantidade = $("#qtd").val();
+
+    $("#listaReservas").prepend('<tr>'+
+                                    '<td>'+new Date(dataReserva).toLocaleDateString()+'</td>'+
+                                    '<td>'+quantidade+'</td>'+
+                                    '<td>'+new Date().toLocaleDateString()+'</td>'+
+                                '</tr>');
+}

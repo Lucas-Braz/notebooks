@@ -1,8 +1,58 @@
 <div class="row mt-5">
-  <div class="col-6">
-    <h1 class="text-center">Notificações</h1>
-  </div>
-  <div class="col-6">
-    <h1 class="text-center">Reservas</h1>
-  </div>
+    <div class="col-6">
+        <div class="d-flex justify-content-between align-items-center">
+            <span></span>
+            <h1 class="text-center">Notificações</h1>
+            <a href="#" class="btn btn-sm btn-success">+</a>
+        </div>
+        <hr>
+    </div>
+    <div class="col-6 spacer">
+        <div class="d-flex justify-content-between align-items-center">
+            <span></span>
+            <h1 class="text-center">Reservas</h1>
+            <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#novaReserva">
+                +
+            </button>
+        </div>
+        <hr>
+        <section id="reservas">
+            <table class="table table-striped text-center">
+                <thead id="cabListaReservas">
+                <tr>
+                    <th>Data Reserva</th>
+                    <th>Quantidade</th>
+                    <th>Data Criação</th>
+                </tr>
+                </thead>
+                <tbody id="listaReservas">
+                </tbody>
+            </table>
+        </section>
+        <!-- Modal -->
+        <div class="modal fade" id="novaReserva" tabindex="-1" aria-labelledby="novaReservaTitle" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="novaReservaTitle">Nova Reserva</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <input id="data" class="form-control" type="date"/>
+                            </div>
+                            <div class="col-6">
+                                <input id="qtd" class="form-control" type="number"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" onclick="addReserva()">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
