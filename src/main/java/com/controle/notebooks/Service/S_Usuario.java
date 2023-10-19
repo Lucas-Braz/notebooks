@@ -91,7 +91,7 @@ public class S_Usuario {
                 podeEditar = false;
                 mensagem += "A matricula precisa ser preenchida!";
             }
-            if(S_Generico.validarEmail(email)){
+            if(!S_Generico.validarEmail(email)){
                 podeEditar = false;
                 mensagem += "e-Mail Inválido!";
             }
